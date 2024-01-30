@@ -1,5 +1,5 @@
 from utils import *
 
 print(
-    uuid()
+    unitByteConversion(1)
 )
