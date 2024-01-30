@@ -16,4 +16,4 @@ def unitByteConversion(bytes: int):
 
 
 def uuid_v4():
-  return '-'.join(hex(byte)[2:].ljust(2, '0') for byte in randbytes(16))
+  return ''.join(hex(byte)[2:].ljust(2, '0') for byte in randbytes(16))
