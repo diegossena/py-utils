@@ -3,7 +3,7 @@ from random import randbytes
 
 def unitByteConversion(bytes: int) -> str:
   """unitByteConversion(100) -> \"100 B\""""
-  UNITS = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB']
+  UNITS = ('B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB')
   i = 0
   while (bytes > pow(1024, i + 1)):
     i += 1
