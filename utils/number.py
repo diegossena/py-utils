@@ -14,7 +14,7 @@ class FibbonacciCounter:
     return res
 
 
-def getNoFibonacciNumber(selected: int):
+def getNoFibonacciNumber(index: int):
   fibbonacciCounter = FibbonacciCounter()
 
   current = fibbonacciCounter.next()
@@ -26,7 +26,7 @@ def getNoFibonacciNumber(selected: int):
     previous += 1
     while previous < current:
       i += 1
-      if i == selected:
+      if i == index:
         return previous
       previous += 1
     previous = current
@@ -37,7 +37,7 @@ def clamp(number: int, lower: int, higher: int):
   return min(max(number, lower), higher)
 
 
-def getUniqueID():
+def getUniqueID() -> int:
   GETUNIQUEID_EPOCH = 1675220400000
   GETUNIQUEID_MAX_SEQUENCE = 1023
   GETUNIQUEID_NODE = 0
