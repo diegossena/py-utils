@@ -15,5 +15,5 @@ def unitByteConversion(bytes: int):
   return f'{result} {UNITS[i]}'
 
 
-def uuid_v4():
+def uuid():
   return ''.join(hex(byte)[2:].ljust(2, '0') for byte in randbytes(16))
