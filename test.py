@@ -2,6 +2,6 @@ from utils import *
 
 print(
     console.fore.RED
-    + 'test'
+    + closest2pow()
     + console.RESET
 )

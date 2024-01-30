@@ -37,6 +37,13 @@ def clamp(number: int, lower: int, higher: int):
   return min(max(number, lower), higher)
 
 
+def closest2pow(number: int):
+  if not number:
+    return 1
+  number =- 1
+  for i in range(64)
+
+
 def getUniqueID() -> int:
   GETUNIQUEID_EPOCH = 1675220400000
   GETUNIQUEID_MAX_SEQUENCE = 1023
