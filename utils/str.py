@@ -2,7 +2,7 @@ from random import randbytes
 
 
 def unitByteConversion(bytes: int):
-  """bytes -> KB | MB | GB | TB"""
+  """unitByteConversion(100) -> \"100 B\""""
   if not bytes:
     return '0 B'
   UNITS = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB']
@@ -16,4 +16,4 @@ def unitByteConversion(bytes: int):
 
 
 def uuid_v4():
-  return ''.join(hex(byte)[2:].ljust(2, '0') for byte in randbytes(16))
+  return '-'.join(hex(byte)[2:].ljust(2, '0') for byte in randbytes(16))
