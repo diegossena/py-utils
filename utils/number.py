@@ -1,4 +1,4 @@
-import time
+from time import time_ns
 
 
 class FibbonacciCounter:
@@ -41,7 +41,7 @@ def getUniqueID() -> int:
   GETUNIQUEID_EPOCH = 1675220400000
   GETUNIQUEID_MAX_SEQUENCE = 1023
   GETUNIQUEID_NODE = 0
-  currentTime = int(time.time_ns() / 1000000)
+  currentTime = int(time_ns() / 1000000)
   uidTime = currentTime - GETUNIQUEID_EPOCH
 
   getUniqueID.__sequence = (

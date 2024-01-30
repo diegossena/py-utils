@@ -1,9 +1,5 @@
 from utils import *
 
-
 print(
-    getUniqueID()
-)
-print(
-    getUniqueID()
+    uuid_v4()
 )
