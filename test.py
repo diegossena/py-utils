@@ -1,5 +1,7 @@
 from utils import *
 
 print(
-    unitByteConversion(2000)
+    console.fore.RED
+    + 'test'
+    + console.RESET
 )

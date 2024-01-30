@@ -1,0 +1,48 @@
+def ANSI(code: int):
+  return f'\033[{code}m'
+
+
+class console:
+  RESET = ANSI(0)
+  BOLD = ANSI(1)
+  UNDERLINE = ANSI(4)
+
+  class fore:
+    BLACK = ANSI(30)
+    RED = ANSI(31)
+    GREEN = ANSI(32)
+    YELLOW = ANSI(33)
+    BLUE = ANSI(34)
+    MAGENTA = ANSI(35)
+    CYAN = ANSI(36)
+    WHITE = ANSI(37)
+    RESET = ANSI(39)
+
+    LIGHT_BLACK = ANSI(90)
+    LIGHT_RED = ANSI(91)
+    LIGHT_GREEN = ANSI(92)
+    LIGHT_YELLOW = ANSI(93)
+    LIGHT_BLUE = ANSI(94)
+    LIGHT_MAGENTA = ANSI(95)
+    LIGHT_CYAN = ANSI(96)
+    LIGHT_WHITE = ANSI(97)
+
+  class back:
+    BLACK = ANSI(40)
+    RED = ANSI(41)
+    GREEN = ANSI(42)
+    YELLOW = ANSI(44)
+    BLUE = ANSI(44)
+    MAGENTA = ANSI(45)
+    CYAN = ANSI(46)
+    WHITE = ANSI(47)
+    RESET = ANSI(49)
+
+    LIGHT_BLACK = ANSI(100)
+    LIGHT_RED = ANSI(101)
+    LIGHT_GREEN = ANSI(102)
+    LIGHT_YELLOW = ANSI(103)
+    LIGHT_BLUE = ANSI(104)
+    LIGHT_MAGENTA = ANSI(105)
+    LIGHT_CYAN = ANSI(106)
+    LIGHT_WHITE = ANSI(107)
