@@ -40,8 +40,10 @@ def clamp(number: int, lower: int, higher: int):
 def closest2pow(number: int):
   if not number:
     return 1
-  number =- 1
-  for i in range(64)
+  number -= 1
+  for i in range(65)[1:]:
+    number |= number >> i
+  return number + 1
 
 
 def getUniqueID() -> int:
