@@ -44,13 +44,13 @@ def getUniqueID() -> int:
   currentTime = int(time.time_ns() / 1000000)
   uidTime = currentTime - GETUNIQUEID_EPOCH
 
-  getUniqueID.sequence = (
-      getUniqueID.sequence + 1
-  ) & GETUNIQUEID_MAX_SEQUENCE if uidTime == getUniqueID.lastTimestamp else 0
-  getUniqueID.lastTimestamp = uidTime
+  getUniqueID.__sequence = (
+      getUniqueID.__sequence + 1
+  ) & GETUNIQUEID_MAX_SEQUENCE if uidTime == getUniqueID.__lastTimestamp else 0
+  getUniqueID.__lastTimestamp = uidTime
 
-  return uidTime << 22 | GETUNIQUEID_NODE << 10 | getUniqueID.sequence
+  return uidTime << 22 | GETUNIQUEID_NODE << 10 | getUniqueID.__sequence
 
 
-getUniqueID.sequence = 0
-getUniqueID.lastTimestamp = 0
+getUniqueID.__sequence = 0
+getUniqueID.__lastTimestamp = 0
