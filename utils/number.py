@@ -41,7 +41,7 @@ def closest2pow(number: int):
   if not number:
     return 1
   number -= 1
-  for i in range(65)[1:]:
+  for i in range(1, 64):
     number |= number >> i
   return number + 1
 
